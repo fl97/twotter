@@ -1,10 +1,18 @@
 <template>
   <div class="user-profile">
-    <div class="user-profile__user-">
+    <div class="user-profile__user-panel">
       <h1 class="user-profile__username">@{{ user.username }}</h1>
+      <div class="user-profile__admin-badge" v-if="user.isAdmin">
+          Admin
+      </div>
       <div class="user-profile__follower">
         <strong>Followers: </strong> {{ followers }}
       </div>
+    </div>
+    <div class="user-profile__twoots-wrapper">
+        <div class="user-profile__twoot" v-for="twoot in user.twoots" :key="twoot.id">
+            {{ twoot.content }}
+        </div>
     </div>
   </div>
 </template>
@@ -21,7 +29,11 @@ export default {
         firstName: 'Florian',
         lastName: 'Lutz',
         email: 'lutz-florian@gmx.net',
-        isAdmin: true
+        isAdmin: true,
+        twoots: [
+            {id: 1, content: 'Twotter is amazing!'},
+            {id: 2, content: "Dont forget to subscribe to The Earth is Square!"}
+        ]
       }
     }
   },
@@ -64,6 +76,15 @@ export default {
     background-color: white;
     border-radius: 5px;
     border: 1px solid #DFE3E8;
+}
+
+.user-profile__admin-badge {
+    background: rebeccapurple;
+    color: white;
+    border-radius: 5px;
+    margin-right: auto;
+    padding: 0 10px;
+    font-weight: bold;
 }
 
 h1 {
