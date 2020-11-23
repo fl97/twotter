@@ -6,8 +6,6 @@
             </div>
             <div class="twoot-item__content">
                 {{ twoot.content }}
-                <!-- prints content -->
-                <!-- {{ twoot.content }} -->
             </div>
         </div>
     </div>
