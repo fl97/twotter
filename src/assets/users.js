@@ -18,16 +18,16 @@ export const users = [
         "lastName": "Lutz",
         "email": "lutz-andreas@gmx.net",
         "isAdmin": false,
-        "twoots": null
+        "twoots": []
     },
     {
         "id": 3,
-        "username": "epsilon",
+        "username": "dönermann",
         "firstName": "Andreas",
         "lastName": "Lutz",
         "email": "lutz-andreas@gmx.net",
-        "isAdmin": true,
-        "twoots": null
+        "isAdmin": false,
+        "twoots": []
     },
     {
         "id": 4,
@@ -35,7 +35,7 @@ export const users = [
         "firstName": "Fabian",
         "lastName": "Vogt",
         "email": "vogt-fabian@gmx.net",
-        "isAdmin": true,
-        "twoots": null
+        "isAdmin": false,
+        "twoots": []
     }
 ]
